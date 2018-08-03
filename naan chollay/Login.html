@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .LoginArea{
+        box-shadow: border-box;
+        width:50%;
+        height: 220px;
+        margin: 0 auto;
+        margin-top: 12%;
+        background-color: rgb(146, 94, 194);
+        padding: 6px 12px;
+    }
+
+    .centerArea{
+        width: inherit;
+        margin-left:4%;
+        margin-top:6%;
+    }
+
+    .centerArea input{
+        padding:14px;
+        width: 100%;
+        margin-top:8px;
+        border:none;
+        border-radius: 6px;
+        color:black;
+    }
+
+    button{
+        padding: 8px;
+        width: 30%;
+        margin-left:70%;
+        margin-top:34px;
+        background: lightcoral;
+        border: none;
+        border-radius: 4px;
+        font-size: 22px;
+    }
+
+    .round{
+        border: none;
+        border-radius: 50%;
+    }
+    .profile{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        width: 80%;
+        min-height:600px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 12px;
+        background: lightgreen;
+    }
+    
+    .profile img{
+        margin-top: 18px;
+        margin-bottom: 22px;
+        color: black;
+    }
+
+    .content{
+        text-align: center;
+    }
+
+    .content p, .content h4{
+        padding: 0;
+        margin: 0;
+        margin-bottom:12px;
+    }
+
+    .main-area{
+        background-color: lightblue;
+    }
+    </style>
+</head>
+<body>
+    <div class="LoginArea" id="LoginArea">
+        <div class="centerArea">
+        <input type="text" name="Email" id="Email" placeholder="example@naan.com">
+        <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <button id="submitBtn">Log In</button>
+    </div>
+    </div>
+    <script>
+    
+        var customers = ["Islam Kiani","Zeshan Ahmed","Shaeel Khan","Wakeel"];
+        var passes = ["kiani","Ahmed","Khan","Abdul"];
+        var pics = ["bread.jpg","sundar.jpg","car.jpg","sundar.jpg"];
+        customers.forEach(function(customer){
+            customer.toLowerCase();
+        });
+        
+       
+        var submitBtn = document.getElementById("submitBtn");
+
+        document.querySelector("#submitBtn").addEventListener("click",function(e){
+            const EmailInput = document.querySelector("#Email").value;
+            const password = document.querySelector("#password").value.toLowerCase();
+            
+            console.log(EmailInput);
+
+                if(customers.indexOf(EmailInput)!== -1){
+                    const loginArea = document.getElementById("LoginArea");
+                    var createCustomerProfile = `<div class="profile">
+                    <div class="sidearea">
+                     <img src="${pics[customers.indexOf(EmailInput)]}" alt="${EmailInput}" width="30%" height="30%" class="round">
+                     <div class="content">
+                     <h4>${customers[customers.indexOf(EmailInput)]}</h5>
+                     <p>A web developer skilled in HTML, CSS, Javascript, Jquery</p>
+                     </div>
+                     </div>
+                     <div class="main-area">
+                        <p>Hi! ${password} we are glad to see you here</p>
+                    </div>
+                        </div>`;
+
+                loginArea.style.display = "none";    
+                 document.body.innerHTML += createCustomerProfile;
+                 
+            }
+            
+            console.log(EmailInput.toLowerCase());
+            //console.log(customers[customers.indexOf(EmailInput)-1].toLowerCase());
+            
+        });
+       
+    </script>
+</body>
+</html>

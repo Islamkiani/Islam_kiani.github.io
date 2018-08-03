@@ -1,0 +1,518 @@
+
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+        
+       
+    }
+
+    .head{
+        margin-bottom: 0px;
+        padding:0;
+        border-bottom: 3px solid grey;
+        overflow: hidden;
+    }
+    h2{
+        margin:0;
+        padding:20px 0;
+    }
+
+    .container{
+        padding:0;
+        margin:0;
+        width:100%;
+        min-height:60px;
+        background-color: black;
+        opacity: 0.9;
+        color: white;
+        text-align:center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    ul{
+        list-style-type: none;
+    }
+
+    .container-nav{
+        padding:0px;
+        margin:0;
+        width:100%;
+        min-height:60px;
+        background-color: black;
+        opacity: 0.9;
+        color: white;
+    }
+
+    .nav-div{
+        float:left;
+        box-sizing:border-box;
+        background-color: inherit;
+        color: white;
+    }
+
+    .highlight{
+        color: cadetblue;
+    }
+    
+    .social-nav{
+        float:right;
+        box-sizing:border-box;
+        background-color: inherit;
+        color: white;
+        margin-right: 18px;
+    }
+
+    li{
+        display: inline-block;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+
+    a{
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .head a:hover{
+        color: rgb(118, 118, 228);
+        font-size:16px;
+        border-bottom: 2px solid rgb(118, 118, 228);
+    }
+
+    .main-content{
+        width: 100%;
+        min-height: 550px;
+        background-image:linear-gradient(to  right,rgb(0, 0, 0) ,rgb(118, 118, 228));
+        opacity: 0.8;
+        
+        
+
+    }
+    .links{
+        float: left;
+        max-width:20%;
+        min-height: inherit;
+        color:rgb(221, 217, 217);
+    }
+    .links li{
+        margin-bottom: 2px;
+        padding:4px 8px;
+        width:inherit;
+        border-bottom: 1px solid grey;
+    }
+    .links ul{
+        margin: 0;
+        padding: 4px;
+    }
+
+    .links a:hover{
+        color:rgb(118, 118, 228);
+    }
+
+    .content{
+        float: right;
+        width:79%;
+        min-height: inherit;
+        text-align: center;
+        text-indent: 5%;
+        color: white;
+        border-left: 3px solid grey;
+        background: url("bread.jpg") no-repeat;
+        background-size: cover;
+        color: black;
+    }
+
+    .current{
+        color: rgb(118, 118, 228);
+        border-bottom: 2px solid rgb(118, 118, 228);
+    }
+    
+    p{
+        word-wrap: break-word;
+    }
+
+    .footer{
+        width: 100%;
+        min-height: 220px;
+        background-color: black;
+        opacity: 0.9;
+        color:white;
+    }
+
+    .footer-design{
+        margin-left:200px;
+        padding: 22px;
+        
+    }
+    .footer-design div{
+        float: left;
+    }
+
+    .left{
+        width: 33%;
+        height: inherit;
+    }
+    .left li{
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .middle{
+        width: 33%;
+        height: inherit;
+    }
+
+    .middle li{
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .right{
+        width: 33%;
+        height: inherit;
+    }
+    .right li{
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .footer-design i{
+        margin-right: 10px;
+    }
+
+    .footer-design a:hover{
+        color: rgb(118, 118, 228);
+        border-bottom: 2px solid rgb(118, 118, 228);
+    }
+
+    .copyright-content{
+        text-align: center;
+        height: 20px;
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+    .copyright-content p{
+        margin-top: 32px;
+    }
+
+    .Owners{
+        width: 100%;
+        min-height:430px;
+        background: rgb(31, 30, 30);
+        color: white;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    @media only screen and (max-width:620px){
+        .Owners{
+            min-height:650px;
+        }
+
+       .Owner > div::after{
+            content:"";
+            clear:both;
+            display: table;
+        }
+
+        .Owners>div{
+            width: 100%;
+            height: 70%;
+            margin: 0 auto;
+        }
+
+        .links{
+            display: none;
+        }
+
+
+        .container-nav{
+            height: 100px;
+        }
+
+        .nav-div li a{
+            margin-left: 0;
+        }
+        .social-nav{
+            min-width: 110%;
+            margin-right:-38px;
+
+        }
+
+        .Owners{
+            display: none;
+        }
+
+       footer{
+           height: 100px;
+       }
+
+       .copyright-content{
+        height: 100px;
+        width: 100%;
+        padding: 12px;
+        display: block;
+       }
+
+        
+
+    }
+
+
+    
+
+    .Owner-divs img{
+        box-sizing: border-box;
+        width: 90px;
+        height:100px;
+        border-radius: 50%;
+        margin:0 auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .Owner-divs{
+        margin-left: 6%;
+    }
+    .Owner-divs div{
+        margin-top:2%;
+        float:left;
+        min-height:220px;
+        width: 25%;
+        height: inherit;
+        background: linear-gradient(black,rgb(118, 118, 228));
+        margin-left: 72px;
+        transform: rotateY(-40deg);
+        transform: rotateX(-40deg);
+        transform: rotateZ(-10deg);
+        border:3px solid rgb(223, 193, 193);
+    }
+
+    .Owner-divs div:hover {
+         transform: scale(1);
+    }
+    
+    .Owner-divs p{
+        text-align: center;
+    }
+
+    .login-form{
+        position: absolute;
+        top: -100%;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 0.6fr 1.4fr;
+        min-height: 350px;
+        background-color: rgb(118, 118, 228);
+        text-align: left;
+        margin-left: 15%;
+        transition: top 0.7s ease;
+        border-radius: 5px;
+        font-size: 28px;
+    }
+
+    .login-block{
+        width: 60%;
+        height: 160px;
+        background-color: rgb(118, 118, 228);
+        padding: 20px 15px;
+        margin: 0 auto;
+        margin-top: 20px;
+        opacity: 1;
+    }
+
+    .login-block input[type="email"]{
+        width: 45%;
+        height: 20px;
+        padding: 6px;
+        border:none;
+        border-radius: 3px;
+        margin-left:14%;
+        margin-bottom:5px;
+        background-color: rgb(247, 240, 240);
+        color: rgb(59, 57, 57);
+    }
+
+    .login-block input[type="password"]{
+        width: 45%;
+        height: 20px;
+        padding: 6px;
+        border-radius: 3px;
+        border: none;
+        margin-left:5.9%;
+        margin-top: 5px;
+        background-color: rgb(247, 240, 240);
+        color: rgb(59, 57, 57);
+    }
+
+    .login-block input:focus{
+        background-color: antiquewhite;
+    }
+
+    .close{
+        font-size: 26px;
+        font-weight: 400;
+        color: red;
+        background: transparent;
+        border:none;
+        position: absolute;
+        top: 12px;
+        right:3%;
+    }
+
+    .dropdown-box {
+        float:right;
+    }
+
+    /*.nav-div{
+        position: relative;
+    }*/
+    .nav-down{
+        position: absolute;
+        box-sizing: border-box;
+        z-index:1;
+        padding: 12px;
+        display:none;
+        line-height: 32px;
+        background: rgba(67, 67, 238, 0.5);
+    }
+
+    .dropbtn{
+        border:none;
+        background: black;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .nav-down  a{
+        display: block;
+    }
+
+    .nav-down {
+        display: none;
+    }
+
+    .dropdown-box:hover .nav-down{
+        display: block;
+    }
+
+    .nav-down:hover a{
+        font-size: 18px;
+    }
+    
+
+    .about-text{
+        margin:0 auto;
+        width: 80%;
+        padding: 12px;
+        line-height: 24px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .about-text p{
+        padding: 4px;
+        line-height: 24px;
+    }
+
+
+    .Owner-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-evenly;
+    }
+
+    .left-col, .right-col, .middle-col{
+        width: 90%;
+        background-color: rgb(118, 118, 228,0.6);
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 4px;
+    }
+
+    .about-text h3{
+        margin-top: 0px;
+    }
+    .Owner-grid img{
+        margin-top:3%;
+        margin-left: 3%;
+        border-radius: 48%;
+        height:14%;
+        max-width:24%;
+    }
+
+    .Owner-grid div:nth-child(odd):hover{
+        transform: scale(1);
+    }
+
+    .Owner-grid div:nth-child(odd){
+        transform: scale(0.9);
+    }
+
+    .company-info{
+        width: 50%;
+        margin:0 auto;
+    }
+
+    h5{
+        margin-bottom: 8px;
+    }
+
+    .signup-form {
+        width: 80%;
+        background-color: rgb(118, 118, 228);
+        color: black;
+        padding: 12px;
+        position: absolute;
+        top:-100%;
+        left:9%;
+        transition: all 0.6s ease;
+        border-radius: 4px;
+
+    }
+
+    .signup-content{
+        padding: 12px;
+        font-size: 22px;
+    }
+    .form-data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 12px;
+        grid-gap:32px;
+    }
+
+    .form-data input{
+        width:90%;
+        padding: 14px;
+        font-size: 20px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    h4{
+        margin-top: 0;
+    }
+
+    .subbtn{
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 42px;
+        
+    }
+    .subbtn button{
+        padding: 12px;
+        width: 80%;
+        background: rgba(67, 67, 238, 0.7);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        text-transform: uppercase;
+
+    }

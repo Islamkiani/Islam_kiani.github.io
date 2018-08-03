@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+
+    body{
+        transition: all 3s linear;
+    }
+     /* slider styling */ 
+    .img-one{
+        width: 300px;
+        height:300px;
+        margin: 0 auto;
+        background-color:green;
+        
+        transition: all 0.6s linear;
+    }
+    .img{
+        background-size: contain;
+        height: inherit;
+    }
+
+    /* Input area*/
+    .input-area{
+        width: 60%;
+        min-height: 140px;
+        padding: 12px;
+        margin: 12px auto;
+    }
+
+    .input-area input{
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        background: lightskyblue;
+        margin-left: 4%;
+    }
+
+    /* book list styling */
+    .javas{
+        width:40%;
+        margin: 8px auto;
+        background:cadetblue;
+        text-align: left;
+        line-height:1.8rem;
+    }
+
+
+    .javas ul{
+        list-style: none;
+    }
+    
+     #newAddition{
+        text-align: center;
+        width: 70%;
+        margin-left: 15%;
+        background: lightblue;
+        padding: 12px;
+        border: none;
+    }
+
+    #close{
+        font-size: 22px;
+        color: rgb(248, 106, 130);
+        position: relative;
+        left: 90%;
+        top:10px;
+        border:none;
+        background-color: black;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="img-one">
+        <img src="bread.jpg" alt="Nature photo" id="img"   width="300"
+        height="300">
+    </div>
+
+    <div class="input-area">
+        <input type="text" name="ISBN" id="ISBN" placeholder="Book ISBN">
+        <input type="text" name="Title" id="Title" placeholder="Book Title">
+        <input type="text" name="Author" id="Author" placeholder="Author">
+    </div>
+    <button onclick="addNewBook();" id="newAddition">Add to list</button>
+    <div class="javas" id="list">
+        <button id="close" onclick="removeBook(this);">X</button>
+        <ul class="books">
+            <li>Book No : 1</li>
+            <li id="ISBN">ISBN : 21413342</li>
+            <li id="Title">Title : Javascript Deep Dive</li>
+            <li id="Author">Autor : Brenden Eich</li>
+        </ul>
+    </div>
+    <script>
+
+        // slider 
+    var imgs=["bread.jpg","sundar.jpg","car.jpg","new.jpg"];
+    var Img=document.getElementById("img");
+    var index=0;
+
+     function changeImg(){
+        var op=0.8-(index/10);
+        Img.style.opacity=op;
+         if(index===0){
+             Img.src=imgs[index];
+             index++;
+         }
+         else if(index>=1 && index<imgs.length){
+             Img.src=imgs[index];
+             index++;
+             
+         }
+         else{
+             index=0;
+         }
+     }
+
+     //setInterval(changeImg,1000);
+
+     //book list 
+      const list = document.getElementById("list");
+      var totalBooksInLibraray=2;
+        function addNewBook(e){
+            var bookISBN = document.getElementById("ISBN").value;
+            var bookTitle = document.getElementById("Title").value;
+            var bookAuthor = document.getElementById("Author").value;
+            if(bookISBN!=="" && bookAuthor!=="" && bookTitle!==""){
+            var newBookData = `<div class="javas" id="list">
+            <button id="close" onclick="removeBook(this);">X</button>
+            <ul class="books">
+            <li>Book No : ${totalBooksInLibraray}</li>
+            <li>ISBN : ${bookISBN}</li>
+            <li>Title : ${bookTitle}</li>
+            <li>Autor : ${bookAuthor}</li>
+        </ul>
+        </div>`;
+
+            document.body.innerHTML   +=  newBookData;
+            totalBooksInLibraray++;
+            alert("Book Added");}
+            else{
+                alert("Fill in the fields correctly");
+            }
+        }
+
+         function removeBook(e){
+             e.style.transitionDuration = "2s";
+             e.parentElement.style.display="none";
+         }
+    </script>
+</body>
+</html>
