@@ -1,0 +1,130 @@
+<!DOCTYPE html>	
+<html lang="en">	
+<head>	
+    <meta charset="UTF-8">	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">	
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">	
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />	
+    <link rel="stylesheet"	
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">	
+  <!-- or -->	
+  <link rel="stylesheet"	
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">	
+    <title>Home page | Welcome</title>	
+ </head>	
+<body>	
+    <header class=" head">	
+        <div class="container">	
+                <h2 class="animated bounceInDown"><span class="highlight">Zia</span> Naan Cholay</h2>	
+        </div>	
+        <div class="container-nav">	
+            <div class="nav-div">	
+                   <ul>	
+                       <li><a href="firstTry.html">Home	
+                       </a>	
+                       </li>	
+                       <li><a href="#" class="current" >About</a></li> 	
+                       <div class="dropdown-box">	
+                        <button class="dropbtn">Services <i class="fa fa-caret-down"></i></button>	
+                        <div class="nav-down" id="nav-down">	
+                            <a href="#">Online</a>	
+                            <a href="#">Offline</a>	
+                            <a href="#">Home delivery</a>	
+                        </div>	
+                    </div>    	
+                   </ul> 	
+            </div>	
+            <div class="social-nav">	
+                <ul>	
+                    <li><a href="#" id="sub" onclick="showForm();" class="animated infinite bounce">Login</a></li>	
+                    <li><a href="#">Sign Up</a></li>	
+                </ul>	
+            </div>	
+        </div>	
+    </header>	
+    <section class="Owners">	
+        <div class="about-text">	
+            <h3>Three men working to extend their business!</h3>	
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat incidunt ut a maxime molestias doloremque quibusdam dolor tenetur atque perspiciatis!</p>	
+        </div>	
+        <div class="Owner-grid">	
+            <div class="animated bounceInLeft left-col">	
+                 <img src="sundar.jpg" alt="Google CEO">	
+                 <p>John Doe eager to learn new things but not that much used to of do practice</p>    	
+            </div>	
+            <div class="middle-col animated shake">	
+                <img src="sundar.jpg" alt="Google CEO">	
+                <p>Sarla deans from XYZ knows how to taclke with the difficult design problems</p>   	
+            </div>	
+            <div class="right-col animated bounceInRight">	
+                <img src="sundar.jpg" alt="Google CEO">	
+                <p>Maximan dinno lookig doing his dream job at Naan cholay as a <strong>Senior Web Dev</strong></p>    	
+            </div>	
+        </div>	
+    </section>	
+    <footer class="footer">	
+        <div class="footer-design" class="clearfix">	
+            <div class="left">	
+                    <ul>	
+                            <li><i class="fab fa-google fa-lg"></i><a  href="#">Google</a></li>	
+                            <li><i class="fab fa-youtube "></i><a href="#">Youtube</a></li> 	
+                            <li><i class="fab fa-instagram fa-lg"></i><a href="#">Instagram</a></li>    	
+                        </ul> 	
+            </div>	
+            <div class="middle">	
+                    <ul>	
+                            <li><i class="fab fa-apple fa-lg"></i><a href="#">Apple</a><i class="fab fa-adidas"></i></li>	
+                            <li><i class="fab fa-android fa-lg"></i><a href="#">Android</a><i class="fab fa-nike"></i></li> 	
+                            <li><i class="fab fa-app-store fa-lg"></i><a href="#">Nokia</a><i class="fab fa-puma"></i></li>    	
+                        </ul> 	
+            </div>	
+            <div class="right">	
+                    <ul>	
+                            <li><a href="#">Tehzeeb</a></li>	
+                            <li><a href="#">Rahat</a></li> 	
+                            <li><a href="#">Nirala</a></li>    	
+                        </ul> 	
+            </div>	
+        </div>	
+        <br style="clear:left;">	
+        <div class="copyright-content">	
+            <p>Zia Naan Cholay &copy;2017-2018</p>	
+        </div>	
+    </footer>	
+    <div class="login-form" id="login">	
+        <button class="close" onclick="closeForm();">X</button>	
+        <div class="company-info">	
+            <h5>Zia Naan Cholay</h5>	
+            <address>	
+                Street : 7,<br>	
+                Plaza : Nishat plaza,<br>	
+                City : Sir Syed Chowk Rwp	
+            </address>	
+        </div>	
+        <form class="login-block">	
+            <label>Email:</label> <input type="email" placeholder="First Name" style="margin-top: 8px;"> <br><br>	
+            <label>Password:</label><input type="password" placeholder="Last Name"><br><br>	
+        </form>	
+    </div>	
+    <script>	
+    var form=document.getElementById("login");	
+     function showForm(){	
+         var submitButton=document.getElementById("sub");	
+         form.style.top="24%";	
+     }	
+      function closeForm(){	
+         form.style.top="-100%";	
+     }	
+      function openMenu(){	
+         var mainE=document.getElementById("main-content");	
+         var navDown=document.getElementById("nav-down");	
+          navDown.addEventListener(click, function(){	
+             mainE.style.zIndex=-1;	
+             navDown.style.display="block";	
+         })	
+     }	
+    </script>	
+</body>	
+</html>
